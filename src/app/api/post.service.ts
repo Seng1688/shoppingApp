@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 
 export class PostService {
-
+hello : number = 2;
 constructor(private http: HttpClient) {}
 
 createAndStorePost( title: string, content: string ){
