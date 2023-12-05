@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- access via dom , not good practice -->
+    <p appBasicHighlight >I'm Custom Attribute </p> 
+     <!-- use method , good practice -->
+    <p [appBetterHighlight]="'skyblue'" defaultColor="lime" >I'm Better Custom Attribute </p>
+  </div>
+</div>
