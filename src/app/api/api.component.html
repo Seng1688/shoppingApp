@@ -59,6 +59,11 @@
             </li>
         </ul>
     </div>
-    <div *ngIf="isFetching" class="col-xs-12 mt-2">Loading...</div>
+    <div *ngIf="isFetching && !error" class="col-xs-12 mt-2">Loading...</div>
+    <div class="alert alert-danger" *ngIf="error">
+        <h3>Error</h3>
+        <p>{{ error }}</p>
+        <button class="btn btn-danger" (click)="onHandleError()">Okay</button>
+    </div>
   </div>
 </div>
